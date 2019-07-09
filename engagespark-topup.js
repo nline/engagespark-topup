@@ -21,7 +21,7 @@ engagespark.prototype.send_topup = function(phoneNumber, amount, clientRef, call
     };
 
     request({
-        uri: 'https://api.engagespark.com/v1/airtime-topup/',
+        uri: 'https://api.engagespark.com/v1/airtime-topup',
         method: 'POST',
         headers: headers,
         json: true,

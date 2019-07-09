@@ -1,5 +1,5 @@
 {
-  "name": "@nline/engagespark-topup",
+  "name": "engagespark-topup",
   "version": "0.0.1",
   "description": "Send engagespark topups",
   "devDependencies": {
@@ -7,10 +7,11 @@
   },
   "dependencies": {
     "request": "2.88.0",
-    "debug": "4.1.1"
+    "debug": "4.1.1",
+    "commander": ""
   },
   "scripts": {
-    "test": "jshint engagespark-topup.js"
+    "test": "jshint engagespark-topup.js cli.js"
   },
   "main": "engagespark-topup.js",
   "engines": {
@@ -29,6 +30,9 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/nline/engagespark-topup/issues"
+  },
+  "bin": {
+    "engagespark-send-topup": "./cli.js"
   },
   "homepage": "https://github.com/nline/engagespark-topup#readme"
 }
