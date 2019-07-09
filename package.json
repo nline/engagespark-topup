@@ -1,5 +1,5 @@
 {
-  "name": "engagespark-topup",
+  "name": "@nline/engagespark-topup",
   "version": "0.0.1",
   "description": "Send engagespark topups",
   "devDependencies": {
