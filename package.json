@@ -1,0 +1,19 @@
+{
+    "name": "engagespark-topup",
+    "version": "0.0.1",
+    "description": "Send engagespark topups",
+    "devDependencies": {
+        "jshint": "^2.10.2"
+    },
+    "dependencies": {
+        "request": "2.88.0",
+        "debug": "4.1.1"
+    },
+    "scripts": {
+        "test": "jshint engagespark-topup.js"
+    },
+    "main": "engagespark-topup.js",
+    "engines": {
+        "node": ">=4.3.2"
+    }
+}
