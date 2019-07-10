@@ -4,6 +4,7 @@ var debug = require('debug')('engagespark-topup');
 var engagespark = function(organizationID, APIKey) {
     this.orgID = organizationID;
     this.APIKey = APIKey; 
+    debug("Engagespark Initialized with orgID", this.orgID, "and APIKey", this.APIKey);
 };
 
 engagespark.prototype.send_topup = function(phoneNumber, amount, clientRef, callback) {
