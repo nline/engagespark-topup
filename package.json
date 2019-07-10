@@ -1,6 +1,6 @@
 {
   "name": "engagespark-topup",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Send engagespark topups",
   "devDependencies": {
     "jshint": "^2.10.2"

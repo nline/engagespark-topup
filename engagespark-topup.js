@@ -30,7 +30,13 @@ engagespark.prototype.send_topup = function(phoneNumber, amount, clientRef, call
         debug(error);
         debug(response);
         debug(body);
-        callback(error, response, body);
+        if(error) {
+            callback(error, response, body);
+        } else if(body.status != 'Success') {
+            callback(body.errorMessage, response, body);
+        } else {
+            callback(error, response, body);
+        }
     });
 };
 
