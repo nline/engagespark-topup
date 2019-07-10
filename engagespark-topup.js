@@ -9,10 +9,10 @@ var engagespark = function(organizationID, APIKey) {
 engagespark.prototype.send_topup = function(phoneNumber, amount, clientRef, callback) {
     
     var body = {
-        organizationId: this.orgID,
-        maxAmount: amount,
-        phoneNumber: phoneNumber,
-        clientRef: clientRef
+        organizationId: String(this.orgID),
+        maxAmount: String(amount),
+        phoneNumber: String(phoneNumber),
+        clientRef: String(clientRef)
     };
 
     var headers = {
@@ -32,7 +32,7 @@ engagespark.prototype.send_topup = function(phoneNumber, amount, clientRef, call
         debug(body);
         if(error) {
             callback(error, response, body);
-        } else if(body.status != 'Success') {
+        } else if(typeof body != 'undefined' && body.status != 'Success') {
             callback(body.errorMessage, response, body);
         } else {
             callback(error, response, body);
