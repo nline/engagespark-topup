@@ -34,9 +34,9 @@ engagespark.prototype.send_topup = function(phoneNumber, amount, clientRef, call
             callback(error, response, body);
         } else if(typeof body == 'undefined') {
             callback('Undefined response body', response, body);
-        } else if(!('status' in body)) {
+        } else if(typeof body != 'object' || !('status' in body)) {
             callback('No status in response body', response, body);
-        } else if(typeof body != 'undefined' && ('status' in body) && body.status != 'Success') {
+        } else if(body.status != 'Success') {
             callback('Transaction status not success', response, body);
         } else {
             callback(error, response, body);
