@@ -1,5 +1,7 @@
 name: NPM Package build
 on: [push]
+env:
+  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 jobs:
   backend_build:
     runs-on: ubuntu-latest
@@ -23,5 +25,3 @@ jobs:
       - name: NPM Publish
         if: github.ref == 'refs/heads/master'
         run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
