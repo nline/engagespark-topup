@@ -24,7 +24,7 @@ jobs:
 
       # If this is a push to master push it to NPM
       - name: NPM Publish
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/main'
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
