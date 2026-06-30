@@ -7,11 +7,12 @@ var engagespark = function(organizationID, APIKey) {
     debug("Engagespark Initialized with orgID", this.orgID, "and APIKey", this.APIKey);
 };
 
-engagespark.prototype.send_topup = function(phoneNumber, amount, clientRef, callback) {
+engagespark.prototype.send_topup = function(phoneNumber, desiredAmount, maxAmount, clientRef, callback) {
     
     var body = {
         organizationId: String(this.orgID),
-        maxAmount: String(amount),
+        desiredAmount: String(desiredAmount),
+        maxAmount: String(maxAmount),
         phoneNumber: String(phoneNumber),
         clientRef: String(clientRef)
     };
